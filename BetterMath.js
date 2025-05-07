@@ -1,356 +1,371 @@
+const termsHigh = 10000000
+const termsLow = 1000000
+
 class BetterMath {
-    constructor() {
-    }
-    
-    getInfo() {
-        return {
-            "id": "BetterMath",
-            "name": "Better Math",
-            "blocks": [{
-                "opcode": "approxEqual",
-                "blockType": Scratch.BlockType.BOOLEAN,
-                "text": "[left] ≈ [right]",
-                "arguments": {
-                    "left": {
-                        "type": Scratch.ArgumentType.NUMBER,
-                        "defaultValue": 4.5
-                    },
-                    "right": {
-                        "type": Scratch.ArgumentType.NUMBER,
-                        "defaultValue": 5.4
-                    }
-                }
-            },
+		constructor() {}
+		
+		getInfo() {
+				return {
+						"id": "BetterMath",
+						"name": "Better Math",
+						"blocks": [{
+								"opcode": "approxEqual",
+								"blockType": Scratch.BlockType.BOOLEAN,
+								"text": "[𝑥] ≈ [𝑦]",
+								"arguments": {
+										"𝑥": {
+												"type": Scratch.ArgumentType.NUMBER,
+												"defaultValue": 4.5
+										},
+										"𝑦": {
+												"type": Scratch.ArgumentType.NUMBER,
+												"defaultValue": 5.4
+										}
+								}
+						},
 			{
 				"opcode": "notEqual",
 				"blockType": Scratch.BlockType.BOOLEAN,
-				"text": "[left] ≶ [right]",
+				"text": "[𝑥] ≶ [𝑦]",
 				"arguments": {
-					"left": {
-                        "type": Scratch.ArgumentType.NUMBER,
-                        "defaultValue": 5
-                    },
-                    "right": {
-                        "type": Scratch.ArgumentType.NUMBER,
-                        "defaultValue": 5
-                    }
+					"𝑥": {
+												"type": Scratch.ArgumentType.NUMBER,
+												"defaultValue": 5
+										},
+										"𝑦": {
+												"type": Scratch.ArgumentType.NUMBER,
+												"defaultValue": 5
+										}
 				}
 			},
 			{
 				"opcode": "equal",
 				"blockType": Scratch.BlockType.BOOLEAN,
-				"text": "[left] ≸ [right]",
+				"text": "[𝑥] ≸ [𝑦]",
 				"arguments": {
-					"left": {
-                        "type": Scratch.ArgumentType.NUMBER,
-                        "defaultValue": 5
-                    },
-                    "right": {
-                        "type": Scratch.ArgumentType.NUMBER,
-                        "defaultValue": 5
-                    }
+					"𝑥": {
+												"type": Scratch.ArgumentType.NUMBER,
+												"defaultValue": 5
+										},
+										"𝑦": {
+												"type": Scratch.ArgumentType.NUMBER,
+												"defaultValue": 5
+										}
 				}
 			},
 			{
 				"opcode": "lessThanOrEqual",
 				"blockType": Scratch.BlockType.BOOLEAN,
-				"text": "[left] ≤ [right]",
+				"text": "[𝑥] ≤ [𝑦]",
 				"arguments": {
-					"left": {
-                        "type": Scratch.ArgumentType.NUMBER,
-                        "defaultValue": 5
-                    },
-                    "right": {
-                        "type": Scratch.ArgumentType.NUMBER,
-                        "defaultValue": 5
-                    }
+					"𝑥": {
+												"type": Scratch.ArgumentType.NUMBER,
+												"defaultValue": 5
+										},
+										"𝑦": {
+												"type": Scratch.ArgumentType.NUMBER,
+												"defaultValue": 5
+										}
 				}
 			},
 			{
 				"opcode": "moreThanOrEqual",
 				"blockType": Scratch.BlockType.BOOLEAN,
-				"text": "[left] ≥ [right]",
+				"text": "[𝑥] ≥ [𝑦]",
 				"arguments": {
-					"left": {
-                        "type": Scratch.ArgumentType.NUMBER,
-                        "defaultValue": 5.1
-                    },
-                    "right": {
-                        "type": Scratch.ArgumentType.NUMBER,
-                        "defaultValue": 5
-                    }
+					"𝑥": {
+												"type": Scratch.ArgumentType.NUMBER,
+												"defaultValue": 5.1
+										},
+										"𝑦": {
+												"type": Scratch.ArgumentType.NUMBER,
+												"defaultValue": 5
+										}
 				}
 			},
 			{
 				"opcode": "notLessThanOrEqual",
 				"blockType": Scratch.BlockType.BOOLEAN,
-				"text": "[left] ≰ [right]",
+				"text": "[𝑥] ≰ [𝑦]",
 				"arguments": {
-					"left": {
-                        "type": Scratch.ArgumentType.NUMBER,
-                        "defaultValue": 5
-                    },
-                    "right": {
-                        "type": Scratch.ArgumentType.NUMBER,
-                        "defaultValue": 5
-                    }
+					"𝑥": {
+												"type": Scratch.ArgumentType.NUMBER,
+												"defaultValue": 5
+										},
+										"𝑦": {
+												"type": Scratch.ArgumentType.NUMBER,
+												"defaultValue": 5
+										}
 				}
 			},
 			{
 				"opcode": "notMoreThanOrEqual",
 				"blockType": Scratch.BlockType.BOOLEAN,
-				"text": "[left] ≱ [right]",
+				"text": "[𝑥] ≱ [𝑦]",
 				"arguments": {
-					"left": {
-                        "type": Scratch.ArgumentType.NUMBER,
-                        "defaultValue": 5.1
-                    },
-                    "right": {
-                        "type": Scratch.ArgumentType.NUMBER,
-                        "defaultValue": 5
-                    }
+					"𝑥": {
+												"type": Scratch.ArgumentType.NUMBER,
+												"defaultValue": 5.1
+										},
+										"𝑦": {
+												"type": Scratch.ArgumentType.NUMBER,
+												"defaultValue": 5
+										}
 				}
 			},
 			{
 				"opcode": "notLessThan",
 				"blockType": Scratch.BlockType.BOOLEAN,
-				"text": "[left] ≮ [right]",
+				"text": "[𝑥] ≮ [𝑦]",
 				"arguments": {
-					"left": {
-                        "type": Scratch.ArgumentType.NUMBER,
-                        "defaultValue": 4
-                    },
-                    "right": {
-                        "type": Scratch.ArgumentType.NUMBER,
-                        "defaultValue": 5
-                    }
+					"𝑥": {
+												"type": Scratch.ArgumentType.NUMBER,
+												"defaultValue": 4
+										},
+										"𝑦": {
+												"type": Scratch.ArgumentType.NUMBER,
+												"defaultValue": 5
+										}
 				}
 			},
 			{
 				"opcode": "notMoreThan",
 				"blockType": Scratch.BlockType.BOOLEAN,
-				"text": "[left] ≯ [right]",
+				"text": "[𝑥] ≯ [𝑦]",
 				"arguments": {
-					"left": {
-                        "type": Scratch.ArgumentType.NUMBER,
-                        "defaultValue": 5
-                    },
-                    "right": {
-                        "type": Scratch.ArgumentType.NUMBER,
-                        "defaultValue": 4
-                    }
+					"𝑥": {
+												"type": Scratch.ArgumentType.NUMBER,
+												"defaultValue": 5
+										},
+										"𝑦": {
+												"type": Scratch.ArgumentType.NUMBER,
+												"defaultValue": 4
+										}
 				}
 			},
 			{
 				"opcode": "lessOrApproxEqual",
 				"blockType": Scratch.BlockType.BOOLEAN,
-				"text": "[left] ≲ [right]",
+				"text": "[𝑥] ≲ [𝑦]",
 				"arguments": {
-					"left": {
-                        "type": Scratch.ArgumentType.NUMBER,
-                        "defaultValue": 5.1
-                    },
-                    "right": {
-                        "type": Scratch.ArgumentType.NUMBER,
-                        "defaultValue": 5
-                    }
+					"𝑥": {
+												"type": Scratch.ArgumentType.NUMBER,
+												"defaultValue": 5.1
+										},
+										"𝑦": {
+												"type": Scratch.ArgumentType.NUMBER,
+												"defaultValue": 5
+										}
 				}
 			},
 			{
 				"opcode": "moreOrApproxEqual",
 				"blockType": Scratch.BlockType.BOOLEAN,
-				"text": "[left] ≳ [right]",
+				"text": "[𝑥] ≳ [𝑦]",
 				"arguments": {
-					"left": {
-                        "type": Scratch.ArgumentType.NUMBER,
-                        "defaultValue": 5
-                    },
-                    "right": {
-                        "type": Scratch.ArgumentType.NUMBER,
-                        "defaultValue": 5.1
-                    }
+					"𝑥": {
+												"type": Scratch.ArgumentType.NUMBER,
+												"defaultValue": 5
+										},
+										"𝑦": {
+												"type": Scratch.ArgumentType.NUMBER,
+												"defaultValue": 5.1
+										}
 				}
 			},
 			{
 				"opcode": "precedes",
 				"blockType": Scratch.BlockType.BOOLEAN,
-				"text": "[left] ≺ [right]",
+				"text": "[𝑥] ≺ [𝑦]",
 				"arguments": {
-					"left": {
-                        "type": Scratch.ArgumentType.NUMBER,
-                        "defaultValue": 4
-                    },
-                    "right": {
-                        "type": Scratch.ArgumentType.NUMBER,
-                        "defaultValue": 5
-                    }
+					"𝑥": {
+												"type": Scratch.ArgumentType.NUMBER,
+												"defaultValue": 4
+										},
+										"𝑦": {
+												"type": Scratch.ArgumentType.NUMBER,
+												"defaultValue": 5
+										}
 				}
 			},
 			{
 				"opcode": "succeeds",
 				"blockType": Scratch.BlockType.BOOLEAN,
-				"text": "[left] ≻ [right]",
+				"text": "[𝑥] ≻ [𝑦]",
 				"arguments": {
-					"left": {
-                        "type": Scratch.ArgumentType.NUMBER,
-                        "defaultValue": 5
-                    },
-                    "right": {
-                        "type": Scratch.ArgumentType.NUMBER,
-                        "defaultValue": 4
-                    }
+					"𝑥": {
+												"type": Scratch.ArgumentType.NUMBER,
+												"defaultValue": 5
+										},
+										"𝑦": {
+												"type": Scratch.ArgumentType.NUMBER,
+												"defaultValue": 4
+										}
 				}
 			},
 			{
 				"opcode": "doublePrecedes",
 				"blockType": Scratch.BlockType.BOOLEAN,
-				"text": "[left] ⪻ [right]",
+				"text": "[𝑥] ⪻ [𝑦]",
 				"arguments": {
-					"left": {
-                        "type": Scratch.ArgumentType.NUMBER,
-                        "defaultValue": 3
-                    },
-                    "right": {
-                        "type": Scratch.ArgumentType.NUMBER,
-                        "defaultValue": 5
-                    }
+					"𝑥": {
+												"type": Scratch.ArgumentType.NUMBER,
+												"defaultValue": 3
+										},
+										"𝑦": {
+												"type": Scratch.ArgumentType.NUMBER,
+												"defaultValue": 5
+										}
 				}
 			},
 			{
 				"opcode": "doubleSucceeds",
 				"blockType": Scratch.BlockType.BOOLEAN,
-				"text": "[left] ⪼ [right]",
+				"text": "[𝑥] ⪼ [𝑦]",
 				"arguments": {
-					"left": {
-                        "type": Scratch.ArgumentType.NUMBER,
-                        "defaultValue": 5
-                    },
-                    "right": {
-                        "type": Scratch.ArgumentType.NUMBER,
-                        "defaultValue": 3
-                    }
+					"𝑥": {
+												"type": Scratch.ArgumentType.NUMBER,
+												"defaultValue": 5
+										},
+										"𝑦": {
+												"type": Scratch.ArgumentType.NUMBER,
+												"defaultValue": 3
+										}
 				}
 			},
 			{
 				"opcode": "notPrecedes",
 				"blockType": Scratch.BlockType.BOOLEAN,
-				"text": "[left] ⊀ [right]",
+				"text": "[𝑥] ⊀ [𝑦]",
 				"arguments": {
-					"left": {
-                        "type": Scratch.ArgumentType.NUMBER,
-                        "defaultValue": 4
-                    },
-                    "right": {
-                        "type": Scratch.ArgumentType.NUMBER,
-                        "defaultValue": 5
-                    }
+					"𝑥": {
+												"type": Scratch.ArgumentType.NUMBER,
+												"defaultValue": 4
+										},
+										"𝑦": {
+												"type": Scratch.ArgumentType.NUMBER,
+												"defaultValue": 5
+										}
 				}
 			},
 			{
 				"opcode": "notSucceeds",
 				"blockType": Scratch.BlockType.BOOLEAN,
-				"text": "[left] ⊁ [right]",
+				"text": "[𝑥] ⊁ [𝑦]",
 				"arguments": {
-					"left": {
-                        "type": Scratch.ArgumentType.NUMBER,
-                        "defaultValue": 5
-                    },
-                    "right": {
-                        "type": Scratch.ArgumentType.NUMBER,
-                        "defaultValue": 4
-                    }
+					"𝑥": {
+												"type": Scratch.ArgumentType.NUMBER,
+												"defaultValue": 5
+										},
+										"𝑦": {
+												"type": Scratch.ArgumentType.NUMBER,
+												"defaultValue": 4
+										}
 				}
 			},
 			{
 				"opcode": "precedesOrEqual",
 				"blockType": Scratch.BlockType.BOOLEAN,
-				"text": "[left] ≼ [right]",
+				"text": "[𝑥] ≼ [𝑦]",
 				"arguments": {
-					"left": {
-                        "type": Scratch.ArgumentType.NUMBER,
-                        "defaultValue": 4
-                    },
-                    "right": {
-                        "type": Scratch.ArgumentType.NUMBER,
-                        "defaultValue": 5
-                    }
+					"𝑥": {
+												"type": Scratch.ArgumentType.NUMBER,
+												"defaultValue": 4
+										},
+										"𝑦": {
+												"type": Scratch.ArgumentType.NUMBER,
+												"defaultValue": 5
+										}
 				}
 			},
 			{
 				"opcode": "succeedsOrEqual",
 				"blockType": Scratch.BlockType.BOOLEAN,
-				"text": "[left] ≽ [right]",
+				"text": "[𝑥] ≽ [𝑦]",
 				"arguments": {
-					"left": {
-                        "type": Scratch.ArgumentType.NUMBER,
-                        "defaultValue": 5
-                    },
-                    "right": {
-                        "type": Scratch.ArgumentType.NUMBER,
-                        "defaultValue": 4
-                    }
+					"𝑥": {
+												"type": Scratch.ArgumentType.NUMBER,
+												"defaultValue": 5
+										},
+										"𝑦": {
+												"type": Scratch.ArgumentType.NUMBER,
+												"defaultValue": 4
+										}
 				}
 			},
 			{
 				"opcode": "precedesOrApproxEqual",
 				"blockType": Scratch.BlockType.BOOLEAN,
-				"text": "[left] ≾ [right]",
+				"text": "[𝑥] ≾ [𝑦]",
 				"arguments": {
-					"left": {
-                        "type": Scratch.ArgumentType.NUMBER,
-                        "defaultValue": 4
-                    },
-                    "right": {
-                        "type": Scratch.ArgumentType.NUMBER,
-                        "defaultValue": 5
-                    }
+					"𝑥": {
+												"type": Scratch.ArgumentType.NUMBER,
+												"defaultValue": 4
+										},
+										"𝑦": {
+												"type": Scratch.ArgumentType.NUMBER,
+												"defaultValue": 5
+										}
 				}
 			},
 			{
 				"opcode": "succeedsOrApproxEqual",
 				"blockType": Scratch.BlockType.BOOLEAN,
-				"text": "[left] ≿ [right]",
+				"text": "[𝑥] ≿ [𝑦]",
 				"arguments": {
-					"left": {
-                        "type": Scratch.ArgumentType.NUMBER,
-                        "defaultValue": 5
-                    },
-                    "right": {
-                        "type": Scratch.ArgumentType.NUMBER,
-                        "defaultValue": 4
-                    }
+					"𝑥": {
+												"type": Scratch.ArgumentType.NUMBER,
+												"defaultValue": 5
+										},
+										"𝑦": {
+												"type": Scratch.ArgumentType.NUMBER,
+												"defaultValue": 4
+										}
 				}
 			},
+			"---",
 			{
 				"opcode": "Δ",
 				"blockType": Scratch.BlockType.REPORTER,
 				"text": "Δ[𝑥]",
 				"arguments": {
-                    "𝑥": {
-                        "type": Scratch.ArgumentType.NUMBER,
-                        "defaultValue": 4
-                    }
+										"𝑥": {
+												"type": Scratch.ArgumentType.NUMBER,
+												"defaultValue": 4
+										}
 				}
 			},
 			{
 				"opcode": "Σ",
 				"blockType": Scratch.BlockType.REPORTER,
-				"text": "Σ([up], [down], [right])",
+				"text": "Σ([up], [down], [𝑦])",
 				"arguments": {
-                    "up": {
-                        "type": Scratch.ArgumentType.NUMBER,
-                        "defaultValue": 1
-                    },
-					"right": {
-                        "type": Scratch.ArgumentType.NUMBER,
-                        "defaultValue": 2
-                    },
+										"up": {
+												"type": Scratch.ArgumentType.NUMBER,
+												"defaultValue": 1
+										},
+					"𝑦": {
+												"type": Scratch.ArgumentType.NUMBER,
+												"defaultValue": 2
+										},
 					"down": {
-                        "type": Scratch.ArgumentType.NUMBER,
-                        "defaultValue": 3
-                    }
+												"type": Scratch.ArgumentType.NUMBER,
+												"defaultValue": 3
+										}
 				}
 			},
+			{
+				"opcode": "Γ",
+				"blockType": Scratch.BlockType.REPORTER,
+				"text": "Γ[𝑥]",
+				"arguments": {
+					"𝑥": {
+						"type": Scratch.ArgumentType.NUMBER,
+						"defaultValue": 5
+					}
+				}
+			},
+			"---",
 			{
 				"opcode": "π",
 				"blockType": Scratch.BlockType.REPORTER,
@@ -387,16 +402,41 @@ class BetterMath {
 				"text": "γ"
 			},
 			{
-				"opcode": "gamma",
+				"opcode": "ζ3",
 				"blockType": Scratch.BlockType.REPORTER,
-				"text": "Γ[𝑥]",
-				"arguments": {
-					"𝑥": {
-						"type": Scratch.ArgumentType.NUMBER,
-						"defaultValue": 5
-					}
-				}
+				"text": "ζ(3)"
 			},
+			{
+				"opcode": "𝐺",
+				"blockType": Scratch.BlockType.REPORTER,
+				"text": "𝐺"
+			},
+			{
+				"opcode": "ϖ",
+				"blockType": Scratch.BlockType.REPORTER,
+				"text": "ϖ"
+			},
+			{
+				"opcode": "𝐴",
+				"blockType": Scratch.BlockType.REPORTER,
+				"text": "𝐴"
+			},
+			{
+				"opcode": "𝐾0",
+				"blockType": Scratch.BlockType.REPORTER,
+				"text": "𝐾₀"
+			},
+			{
+				"opcode": "δ",
+				"blockType": Scratch.BlockType.REPORTER,
+				"text": "δ"
+			},
+			{
+				"opcode": "α",
+				"blockType": Scratch.BlockType.REPORTER,
+				"text": "α"
+			},
+			"---",
 			{
 				"opcode": "sqrt",
 				"blockType": Scratch.BlockType.REPORTER,
@@ -444,120 +484,173 @@ class BetterMath {
 						"defaultValue": 10
 					}
 				}
+			},
+			"---",
+			{
+				"opcode": "power",
+				"blockType": Scratch.BlockType.REPORTER,
+				"text": "[𝑥]^[𝑦]",
+				"arguments": {
+					"𝑥": {
+						"type": Scratch.ArgumentType.NUMBER,
+						"defaultValue": 10
+					},
+					"𝑦": {
+						"type": Scratch.ArgumentType.NUMBER,
+						"defaultValue": 10
+					}
+				}
+			},
+			{
+				"opcode": "multiply",
+				"blockType": Scratch.BlockType.REPORTER,
+				"text": "[𝑥]·[𝑦]",
+				"arguments": {
+					"𝑥": {
+						"type": Scratch.ArgumentType.NUMBER,
+						"defaultValue": 10
+					},
+					"𝑦": {
+						"type": Scratch.ArgumentType.NUMBER,
+						"defaultValue": 10
+					}
+				}
 			}
 			],
-            "menus": {
-                "roundingMethods": {
-                    "acceptReporters": true,
-                    "items": ["floor", "round", "ceil"]
-                }
-            }
-        }
-    }
+						"menus": {
+								"roundingMethods": {
+										"acceptReporters": true,
+										"items": ["floor", "round", "ceil"]
+								}
+						}
+				}
+		}
 
-    approxEqual({ left, right }) {
-		return Math.round(left) === Math.round(right)
+		approxEqual({ 𝑥, 𝑦 }) {
+		return Math.round(𝑥) === Math.round(𝑦)
 	}
 
-	notEqual({ left, right }) {
-		return left !== right
+	notEqual({ 𝑥, 𝑦 }) {
+		return 𝑥 !== 𝑦
 	}
 
-	equal({ left, right }) {
-		return left === right
+	equal({ 𝑥, 𝑦 }) {
+		return 𝑥 === 𝑦
 	}
 
-	lessOrApproxEqual({ left, right }) {
-		return (left < right) || this.approxEqual({ left: left, right: right })
+	lessOrApproxEqual({ 𝑥, 𝑦 }) {
+		return (𝑥 < 𝑦) || this.approxEqual({ 𝑥: 𝑥, 𝑦: 𝑦 })
 	}
 
-	moreOrApproxEqual({ left, right }) {
-		return (left > right) || this.approxEqual({ left: left, right: right })
+	moreOrApproxEqual({ 𝑥, 𝑦 }) {
+		return (𝑥 > 𝑦) || this.approxEqual({ 𝑥: 𝑥, 𝑦: 𝑦 })
 	}
 
-	precedes({ left, right }) {
-		return left + 1 === right
+	precedes({ 𝑥, 𝑦 }) {
+		return 𝑥 + 1 === 𝑦
 	}
 
-	succeeds({ left, right }) {
-		return left === right + 1
+	succeeds({ 𝑥, 𝑦 }) {
+		return 𝑥 === 𝑦 + 1
 	}
 
-	doublePrecedes({ left, right }) {
-		return left + 2 === right
+	doublePrecedes({ 𝑥, 𝑦 }) {
+		return 𝑥 + 2 === 𝑦
 	}
 
-	doubleSucceeds({ left, right }) {
-		return left === right + 2
+	doubleSucceeds({ 𝑥, 𝑦 }) {
+		return 𝑥 === 𝑦 + 2
 	}
 
-	precedesOrEqual({ left, right }) {
-		return (left + 1 === right) || left === right
+	precedesOrEqual({ 𝑥, 𝑦 }) {
+		return (𝑥 + 1 === 𝑦) || 𝑥 === 𝑦
 	}
 
-	succeedsOrEqual({ left, right }) {
-		return (left === right + 1) || left === right
+	succeedsOrEqual({ 𝑥, 𝑦 }) {
+		return (𝑥 === 𝑦 + 1) || 𝑥 === 𝑦
 	}
 
-	precedesOrApproxEqual({ left, right }) {
-		return (left + 1 === right) || this.approxEqual({ left: left, right: right })
+	precedesOrApproxEqual({ 𝑥, 𝑦 }) {
+		return (𝑥 + 1 === 𝑦) || this.approxEqual({ 𝑥: 𝑥, 𝑦: 𝑦 })
 	}
 
-	succeedsOrApproxEqual({ left, right }) {
-		return (left === right + 1) || this.approxEqual({ left: left, right: right })
+	succeedsOrApproxEqual({ 𝑥, 𝑦 }) {
+		return (𝑥 === 𝑦 + 1) || this.approxEqual({ 𝑥: 𝑥, 𝑦: 𝑦 })
 	}
 
-	notPrecedes({ left, right }) {
-		return !this.precedes({ left: left, right: right })
+	notPrecedes({ 𝑥, 𝑦 }) {
+		return !this.precedes({ 𝑥: 𝑥, 𝑦: 𝑦 })
 	}
 
-	notSucceeds({ left, right }) {
-		return !this.succeeds({ left: left, right: right })
+	notSucceeds({ 𝑥, 𝑦 }) {
+		return !this.succeeds({ 𝑥: 𝑥, 𝑦: 𝑦 })
 	}
 
-	lessThanOrEqual({ left, right }) {
-		return left <= right
+	lessThanOrEqual({ 𝑥, 𝑦 }) {
+		return 𝑥 <= 𝑦
 	}
 
-	moreThanOrEqual({ left, right }) {
-		return left >= right
+	moreThanOrEqual({ 𝑥, 𝑦 }) {
+		return 𝑥 >= 𝑦
 	}
 
-	notLessThanOrEqual({ left, right }) {
-		return !(left <= right)
+	notLessThanOrEqual({ 𝑥, 𝑦 }) {
+		return !(𝑥 <= 𝑦)
 	}
 
-	notMoreThanOrEqual({ left, right }) {
-		return !(left >= right)
+	notMoreThanOrEqual({ 𝑥, 𝑦 }) {
+		return !(𝑥 >= 𝑦)
 	}
 
-	notLessThan({ left, right }) {
-		return !(left < right)
+	notLessThan({ 𝑥, 𝑦 }) {
+		return !(𝑥 < 𝑦)
 	}
 
-	notMoreThan({ left, right }) {
-		return !(left > right)
+	notMoreThan({ 𝑥, 𝑦 }) {
+		return !(𝑥 > 𝑦)
 	}
 
 	Δ({ 𝑥 }) {
 		return 0
 	}
 
-	Σ({ up, right, down }) {
+	Σ({ up, 𝑦, down }) {
 		let result = 0
 
 		if (down < up) {
 			for (let i = down; i <= up; i ++) {
-				result += right
+				result += 𝑦
 			}
 		}
 		else {
 			for (let i = up; i <= down; i ++) {
-				result += right
+				result += 𝑦
 			}
 		}
 
 		return result
+	}
+
+	Γ({ 𝑥 }) {
+		const g = 7
+		const p = [
+			0.99999999999980993, 676.5203681218851, -1259.1392167224028,
+			771.32342877765313, -176.6150291498386, 12.507343278686905,
+			-0.13857109526572012, 9.9843695780195716e-6, 1.5056327351493116e-7
+		]
+		
+		if (𝑥 < 0.5) {
+			return Math.PI / (Math.sin(Math.PI * 𝑥) * gamma(1 - 𝑥))
+		}
+		
+		𝑥 --
+		let x = p[0]
+		for (let i = 1; i < g + 2; i ++) {
+			x += p[i] / (𝑥 + i)
+		}
+		
+		let t = 𝑥 + g + 0.5;
+		return Math.sqrt(2 * Math.PI) * t ** (𝑥 + 0.5) * Math.exp(-t) * x;
 	}
 
 	π({}) {
@@ -589,11 +682,56 @@ class BetterMath {
 	}
 
 	γ({}) {
-		return Math.round((1 - this.gamma(1 + 1e-8)) * 1e14) * 1e-6
+		let sum = 0
+		for (let i = 1; i <= termsHigh; i ++) {
+			sum += 1 / i
+		}
+		return sum - Math.log(termsHigh)
 	}
 
-	gamma({ 𝑥 }) {
-		return Math.sqrt(2 * Math.PI / 𝑥) * Math.pow((𝑥 + 5.5) / Math.E, 𝑥)
+	ζ3({}) {
+		let sum = 0
+		for (let i = 1; i <= termsHigh; i ++) {
+			sum += 1 / (i ** 3)
+		}
+		return sum
+	}
+
+	𝐺({}) {
+		let sum = 0
+		for (let i = 0; i < termsLow; i ++) {
+			sum += (-1) ** i / ((2 * i + 1) ** 2)
+		}
+		return sum
+	}
+
+	ϖ({}) {
+		let sum = 0
+		for (let i = 0; i < termsHigh; i ++) {
+			let x = (i + 0.5) / termsHigh
+			sum += 1 / Math.sqrt(1 - x ** 4)
+		}
+		return (sum / termsHigh) * 1
+	}
+
+	𝐴({}) {
+		return 1.2824271291006226 // Sorry, I couldn't get an algorithm to work :(
+	}
+
+	𝐾0({}) {
+		let product = 1
+		for (let i = 1; i <= termsLow; i ++) {
+			product *= Math.pow(i, 1 / i ** 2)
+		}
+		return product
+	}
+
+	δ({}) {
+		return 4.669201609 // Again, I couldn't get an algorithm to work :(
+	}
+
+	α({}) {
+		return 2.502907875 // Again Again, I couldn't get an algorithm to work, I'm so sorry :(
 	}
 
 	sqrt({ 𝑥 }) {
@@ -605,11 +743,20 @@ class BetterMath {
 	}
 
 	ftrt({ 𝑥 }) {
-		return Math.pow(𝑥, 0.25)
+		return 𝑥 ** 0.25
 	}
 
 	root({ 𝑥, 𝑦 }) {
-		return Math.pow(𝑥, 1 / 𝑦)
+		if (𝑦 === 1) { return 𝑥 }
+		return 𝑥 ** (1 / 𝑦)
+	}
+
+	power({ 𝑥, 𝑦 }) {
+		return 𝑥 ** 𝑦
+	}
+
+	multiply({ 𝑥, 𝑦 }) {
+		return 𝑥 * 𝑦
 	}
 }
 
