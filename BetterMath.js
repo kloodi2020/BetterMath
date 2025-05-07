@@ -593,7 +593,7 @@ class BetterMath {
 	}
 
 	gamma({ 𝑥 }) {
-		return Math.exp(Math.lgamma(𝑥))
+		return Math.sqrt(2 * Math.PI / 𝑥) * Math.pow((𝑥 + 5.5) / Math.E, 𝑥)
 	}
 
 	sqrt({ 𝑥 }) {
