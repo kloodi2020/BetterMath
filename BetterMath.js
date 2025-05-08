@@ -15,11 +15,11 @@ class BetterMath {
                 "arguments": {
                     "𝑥": {
                         "type": Scratch.ArgumentType.NUMBER,
-                        "defaultValue": 4.5
+                        "defaultValue": 5.1
                     },
                     "𝑦": {
                         "type": Scratch.ArgumentType.NUMBER,
-                        "defaultValue": 5.4
+                        "defaultValue": 5
                     }
                 }
             },
@@ -30,7 +30,7 @@ class BetterMath {
 				"arguments": {
 					"𝑥": {
                         "type": Scratch.ArgumentType.NUMBER,
-                        "defaultValue": 5
+                        "defaultValue": 6
                     },
                     "𝑦": {
                         "type": Scratch.ArgumentType.NUMBER,
@@ -75,7 +75,7 @@ class BetterMath {
 				"arguments": {
 					"𝑥": {
                         "type": Scratch.ArgumentType.NUMBER,
-                        "defaultValue": 5.1
+                        "defaultValue": 5
                     },
                     "𝑦": {
                         "type": Scratch.ArgumentType.NUMBER,
@@ -90,7 +90,7 @@ class BetterMath {
 				"arguments": {
 					"𝑥": {
                         "type": Scratch.ArgumentType.NUMBER,
-                        "defaultValue": 5
+                        "defaultValue": 4
                     },
                     "𝑦": {
                         "type": Scratch.ArgumentType.NUMBER,
@@ -105,7 +105,7 @@ class BetterMath {
 				"arguments": {
 					"𝑥": {
                         "type": Scratch.ArgumentType.NUMBER,
-                        "defaultValue": 5.1
+                        "defaultValue": 6
                     },
                     "𝑦": {
                         "type": Scratch.ArgumentType.NUMBER,
@@ -135,11 +135,11 @@ class BetterMath {
 				"arguments": {
 					"𝑥": {
                         "type": Scratch.ArgumentType.NUMBER,
-                        "defaultValue": 5
+                        "defaultValue": 6
                     },
                     "𝑦": {
                         "type": Scratch.ArgumentType.NUMBER,
-                        "defaultValue": 4
+                        "defaultValue": 5
                     }
 				}
 			},
@@ -150,7 +150,7 @@ class BetterMath {
 				"arguments": {
 					"𝑥": {
                         "type": Scratch.ArgumentType.NUMBER,
-                        "defaultValue": 5.1
+                        "defaultValue": 5.2
                     },
                     "𝑦": {
                         "type": Scratch.ArgumentType.NUMBER,
@@ -169,7 +169,7 @@ class BetterMath {
                     },
                     "𝑦": {
                         "type": Scratch.ArgumentType.NUMBER,
-                        "defaultValue": 5.1
+                        "defaultValue": 5.2
                     }
 				}
 			},
@@ -195,11 +195,11 @@ class BetterMath {
 				"arguments": {
 					"𝑥": {
                         "type": Scratch.ArgumentType.NUMBER,
-                        "defaultValue": 5
+                        "defaultValue": 6
                     },
                     "𝑦": {
                         "type": Scratch.ArgumentType.NUMBER,
-                        "defaultValue": 4
+                        "defaultValue": 5
                     }
 				}
 			},
@@ -225,11 +225,11 @@ class BetterMath {
 				"arguments": {
 					"𝑥": {
                         "type": Scratch.ArgumentType.NUMBER,
-                        "defaultValue": 5
+                        "defaultValue": 7
                     },
                     "𝑦": {
                         "type": Scratch.ArgumentType.NUMBER,
-                        "defaultValue": 3
+                        "defaultValue": 5
                     }
 				}
 			},
@@ -255,11 +255,11 @@ class BetterMath {
 				"arguments": {
 					"𝑥": {
                         "type": Scratch.ArgumentType.NUMBER,
-                        "defaultValue": 5
+                        "defaultValue": 6
                     },
                     "𝑦": {
                         "type": Scratch.ArgumentType.NUMBER,
-                        "defaultValue": 4
+                        "defaultValue": 5
                     }
 				}
 			},
@@ -285,11 +285,11 @@ class BetterMath {
 				"arguments": {
 					"𝑥": {
                         "type": Scratch.ArgumentType.NUMBER,
-                        "defaultValue": 5
+                        "defaultValue": 6
                     },
                     "𝑦": {
                         "type": Scratch.ArgumentType.NUMBER,
-                        "defaultValue": 4
+                        "defaultValue": 5
                     }
 				}
 			},
@@ -315,11 +315,11 @@ class BetterMath {
 				"arguments": {
 					"𝑥": {
                         "type": Scratch.ArgumentType.NUMBER,
-                        "defaultValue": 5
+                        "defaultValue": 6
                     },
                     "𝑦": {
                         "type": Scratch.ArgumentType.NUMBER,
-                        "defaultValue": 4
+                        "defaultValue": 5
                     }
 				}
 			},
@@ -331,7 +331,7 @@ class BetterMath {
 				"arguments": {
                     "𝑥": {
                         "type": Scratch.ArgumentType.NUMBER,
-                        "defaultValue": 4
+                        "defaultValue": 5
                     }
 				}
 			},
@@ -346,11 +346,11 @@ class BetterMath {
                     },
 					"𝑦": {
                         "type": Scratch.ArgumentType.NUMBER,
-                        "defaultValue": 2
+                        "defaultValue": 3
                     },
 					"down": {
                         "type": Scratch.ArgumentType.NUMBER,
-                        "defaultValue": 3
+                        "defaultValue": 2
                     }
 				}
 			},
@@ -551,7 +551,7 @@ class BetterMath {
 				"arguments": {
 					"𝑥": {
 						"type": Scratch.ArgumentType.NUMBER,
-						"defaultValue": 10
+						"defaultValue": 3
 					}
 				}
 			},
@@ -562,22 +562,22 @@ class BetterMath {
 				"arguments": {
 					"𝑥": {
 						"type": Scratch.ArgumentType.NUMBER,
-						"defaultValue": 10
+						"defaultValue": 4
 					}
 				}
 			},
 			{
 				"opcode": "root",
 				"blockType": Scratch.BlockType.REPORTER,
-				"text": "[𝑦]√[𝑥]",
+				"text": "[x]√[y]",
 				"arguments": {
 					"𝑥": {
 						"type": Scratch.ArgumentType.NUMBER,
-						"defaultValue": 10
+						"defaultValue": 5
 					},
 					"𝑦": {
 						"type": Scratch.ArgumentType.NUMBER,
-						"defaultValue": 10
+						"defaultValue": 2
 					}
 				}
 			},
@@ -589,11 +589,11 @@ class BetterMath {
 				"arguments": {
 					"𝑥": {
 						"type": Scratch.ArgumentType.NUMBER,
-						"defaultValue": 10
+						"defaultValue": 6
 					},
 					"𝑦": {
 						"type": Scratch.ArgumentType.NUMBER,
-						"defaultValue": 10
+						"defaultValue": 3
 					}
 				}
 			},
@@ -604,11 +604,11 @@ class BetterMath {
 				"arguments": {
 					"𝑥": {
 						"type": Scratch.ArgumentType.NUMBER,
-						"defaultValue": 10
+						"defaultValue": 5
 					},
 					"𝑦": {
 						"type": Scratch.ArgumentType.NUMBER,
-						"defaultValue": 10
+						"defaultValue": 5
 					}
 				}
 			}
