@@ -1,2 +1,3 @@
 # BetterMath
-Better Math Extension For Scratch
+An extension meant to confuse you.
+If successful, then yay! :D
