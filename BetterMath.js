@@ -1,6 +1,8 @@
 const termsHigh = 10000000
 const termsLow = 1000000
 
+const epsilon = 0.0001
+
 class BetterMath {
     constructor() {}
     
@@ -338,19 +340,19 @@ class BetterMath {
 			{
 				"opcode": "Σ",
 				"blockType": Scratch.BlockType.REPORTER,
-				"text": "Σ([up], [down], [𝑦])",
+				"text": "Σ([𝑢𝑝], x=[𝑑𝑜𝑤𝑛], [𝑒𝑥𝑝𝑟])",
 				"arguments": {
-                    "up": {
+                    "𝑢𝑝": {
                         "type": Scratch.ArgumentType.NUMBER,
                         "defaultValue": 1
                     },
-					"𝑦": {
+					"𝑒𝑥𝑝𝑟": {
+                        "type": Scratch.ArgumentType.STRING,
+                        "defaultValue": "x * 2"
+                    },
+					"𝑑𝑜𝑤𝑛": {
                         "type": Scratch.ArgumentType.NUMBER,
                         "defaultValue": 3
-                    },
-					"down": {
-                        "type": Scratch.ArgumentType.NUMBER,
-                        "defaultValue": 2
                     }
 				}
 			},
@@ -362,6 +364,21 @@ class BetterMath {
 					"𝑥": {
 						"type": Scratch.ArgumentType.NUMBER,
 						"defaultValue": 5
+					}
+				}
+			},
+			{
+				"opcode": "𝑙𝑖𝑚",
+				"blockType": Scratch.BlockType.REPORTER,
+				"text": "𝑙𝑖𝑚(𝑥→[𝑥], [𝑒𝑥𝑝𝑟])",
+				"arguments": {
+					"𝑥": {
+						"type": Scratch.ArgumentType.NUMBER,
+						"defaultValue": 2
+					},
+					"𝑒𝑥𝑝𝑟": {
+						"type": Scratch.ArgumentType.STRING,
+						"defaultValue": "(x - 1) / (x * x - 1)"
 					}
 				}
 			},
@@ -569,7 +586,7 @@ class BetterMath {
 			{
 				"opcode": "root",
 				"blockType": Scratch.BlockType.REPORTER,
-				"text": "[x]√[y]",
+				"text": "[𝑥]√[𝑦]",
 				"arguments": {
 					"𝑥": {
 						"type": Scratch.ArgumentType.NUMBER,
@@ -634,6 +651,27 @@ class BetterMath {
 		return 𝑥 === 𝑦
 	}
 
+	lessThanOrEqual({ 𝑥, 𝑦 }) {
+		return 𝑥 <= 𝑦
+	}
+	moreThanOrEqual({ 𝑥, 𝑦 }) {
+		return 𝑥 >= 𝑦
+	}
+
+	notLessThanOrEqual({ 𝑥, 𝑦 }) {
+		return 𝑥 > 𝑦
+	}
+	notMoreThanOrEqual({ 𝑥, 𝑦 }) {
+		return 𝑥 < 𝑦
+	}
+
+	notLessThan({ 𝑥, 𝑦 }) {
+		return 𝑥 >= 𝑦
+	}
+	notMoreThan({ 𝑥, 𝑦 }) {
+		return 𝑥 <= 𝑦
+	}
+
 	lessOrApproxEqual({ 𝑥, 𝑦 }) {
 		return (𝑥 < 𝑦) || this.approxEqual({ 𝑥: 𝑥, 𝑦: 𝑦 })
 	}
@@ -655,6 +693,13 @@ class BetterMath {
 		return 𝑥 === 𝑦 + 2
 	}
 
+	notPrecedes({ 𝑥, 𝑦 }) {
+		return !this.precedes({ 𝑥: 𝑥, 𝑦: 𝑦 })
+	}
+	notSucceeds({ 𝑥, 𝑦 }) {
+		return !this.succeeds({ 𝑥: 𝑥, 𝑦: 𝑦 })
+	}
+
 	precedesOrEqual({ 𝑥, 𝑦 }) {
 		return (𝑥 + 1 === 𝑦) || 𝑥 === 𝑦
 	}
@@ -669,49 +714,24 @@ class BetterMath {
 		return (𝑥 === 𝑦 + 1) || this.approxEqual({ 𝑥: 𝑥, 𝑦: 𝑦 })
 	}
 
-	notPrecedes({ 𝑥, 𝑦 }) {
-		return !this.precedes({ 𝑥: 𝑥, 𝑦: 𝑦 })
-	}
-	notSucceeds({ 𝑥, 𝑦 }) {
-		return !this.succeeds({ 𝑥: 𝑥, 𝑦: 𝑦 })
-	}
-
-	lessThanOrEqual({ 𝑥, 𝑦 }) {
-		return 𝑥 <= 𝑦
-	}
-	moreThanOrEqual({ 𝑥, 𝑦 }) {
-		return 𝑥 >= 𝑦
-	}
-
-	notLessThanOrEqual({ 𝑥, 𝑦 }) {
-		return !(𝑥 <= 𝑦)
-	}
-	notMoreThanOrEqual({ 𝑥, 𝑦 }) {
-		return !(𝑥 >= 𝑦)
-	}
-
-	notLessThan({ 𝑥, 𝑦 }) {
-		return !(𝑥 < 𝑦)
-	}
-	notMoreThan({ 𝑥, 𝑦 }) {
-		return !(𝑥 > 𝑦)
-	}
-
 	Δ({ 𝑥 }) {
 		return 0
 	}
 
-	Σ({ up, 𝑦, down }) {
+	Σ({ 𝑢𝑝, 𝑒𝑥𝑝𝑟, 𝑑𝑜𝑤𝑛 }) {
 		let result = 0
 
-		if (down < up) {
-			for (let i = down; i <= up; i ++) {
-				result += 𝑦
+		if (/[^x+-\/*0-9 ()]/g.test(𝑒𝑥𝑝𝑟)) { return NaN }
+		const f = new Function("x", `return ${𝑒𝑥𝑝𝑟}`)
+
+		if (𝑑𝑜𝑤𝑛 < 𝑢𝑝) {
+			for (let i = 𝑑𝑜𝑤𝑛; i <= 𝑢𝑝; i ++) {
+				result += f(i)
 			}
 		}
 		else {
-			for (let i = up; i <= down; i ++) {
-				result += 𝑦
+			for (let i = 𝑢𝑝; i <= 𝑑𝑜𝑤𝑛; i ++) {
+				result += f(i)
 			}
 		}
 
@@ -719,25 +739,39 @@ class BetterMath {
 	}
 
 	Γ({ 𝑥 }) {
-		const g = 7
-		const p = [
-		  0.99999999999980993, 676.5203681218851, -1259.1392167224028,
-		  771.32342877765313, -176.6150291498386, 12.507343278686905,
-		  -0.13857109526572012, 9.9843695780195716e-6, 1.5056327351493116e-7
+		const 𝑔 = 7
+		const 𝑝 = [
+			0.99999999999980993, 676.5203681218851, -1259.1392167224028,
+			771.32342877765313, -176.6150291498386, 12.507343278686905,
+			-0.13857109526572012, 9.9843695780195716e-6, 1.5056327351493116e-7
 		]
 	  
 		if (𝑥 < 0.5) {
-		  return Math.PI / (Math.sin(Math.PI * 𝑥) * gamma(1 - 𝑥))
+			return Math.PI / (Math.sin(Math.PI * 𝑥) * this.Γ({ 𝑥: 1 - 𝑥 }))
 		}
 	  
 		𝑥 --
-		let x = p[0]
-		for (let i = 1; i < g + 2; i ++) {
-		  x += p[i] / (𝑥 + i)
+		let 𝑦 = 𝑝[0]
+		for (let i = 1; i < 𝑔 + 2; i ++) {
+			𝑦 += 𝑝[i] / (𝑥 + i)
 		}
 	  
-		let t = 𝑥 + g + 0.5;
-		return Math.sqrt(2 * Math.PI) * t ** (𝑥 + 0.5) * Math.exp(-t) * x;
+		let 𝑡 = 𝑥 + 𝑔 + 0.5;
+		return Math.sqrt(2 * Math.PI) * 𝑡 ** (𝑥 + 0.5) * Math.exp(-𝑡) * 𝑦;
+	}
+
+	𝑙𝑖𝑚({ 𝑥, 𝑒𝑥𝑝𝑟 }) {
+		if (/[^x+-\/*0-9 ()]/g.test(𝑒𝑥𝑝𝑟)) { return NaN }
+		const f = new Function("x", `return ${𝑒𝑥𝑝𝑟}`)
+
+		let leftApproach = f(𝑥 - epsilon)
+		let rightApproach = f(𝑥 + epsilon)
+		
+		if (Math.abs(leftApproach - rightApproach) < epsilon) {
+			return (leftApproach + rightApproach) / 2
+		} else {
+			return NaN
+		}
 	}
 
 	π({}) {
