@@ -2,40 +2,40 @@ const termsHigh = 10000000
 const termsLow = 1000000
 
 class BetterMath {
-		constructor() {}
-		
-		getInfo() {
-				return {
-						"id": "BetterMath",
-						"name": "Better Math",
-						"blocks": [{
-								"opcode": "approxEqual",
-								"blockType": Scratch.BlockType.BOOLEAN,
-								"text": "[𝑥] ≈ [𝑦]",
-								"arguments": {
-										"𝑥": {
-												"type": Scratch.ArgumentType.NUMBER,
-												"defaultValue": 4.5
-										},
-										"𝑦": {
-												"type": Scratch.ArgumentType.NUMBER,
-												"defaultValue": 5.4
-										}
-								}
-						},
+    constructor() {}
+    
+    getInfo() {
+        return {
+            "id": "BetterMath",
+            "name": "Better Math",
+            "blocks": [{
+                "opcode": "approxEqual",
+                "blockType": Scratch.BlockType.BOOLEAN,
+                "text": "[𝑥] ≈ [𝑦]",
+                "arguments": {
+                    "𝑥": {
+                        "type": Scratch.ArgumentType.NUMBER,
+                        "defaultValue": 4.5
+                    },
+                    "𝑦": {
+                        "type": Scratch.ArgumentType.NUMBER,
+                        "defaultValue": 5.4
+                    }
+                }
+            },
 			{
 				"opcode": "notEqual",
 				"blockType": Scratch.BlockType.BOOLEAN,
 				"text": "[𝑥] ≶ [𝑦]",
 				"arguments": {
 					"𝑥": {
-												"type": Scratch.ArgumentType.NUMBER,
-												"defaultValue": 5
-										},
-										"𝑦": {
-												"type": Scratch.ArgumentType.NUMBER,
-												"defaultValue": 5
-										}
+                        "type": Scratch.ArgumentType.NUMBER,
+                        "defaultValue": 5
+                    },
+                    "𝑦": {
+                        "type": Scratch.ArgumentType.NUMBER,
+                        "defaultValue": 5
+                    }
 				}
 			},
 			{
@@ -44,13 +44,13 @@ class BetterMath {
 				"text": "[𝑥] ≸ [𝑦]",
 				"arguments": {
 					"𝑥": {
-												"type": Scratch.ArgumentType.NUMBER,
-												"defaultValue": 5
-										},
-										"𝑦": {
-												"type": Scratch.ArgumentType.NUMBER,
-												"defaultValue": 5
-										}
+                        "type": Scratch.ArgumentType.NUMBER,
+                        "defaultValue": 5
+                    },
+                    "𝑦": {
+                        "type": Scratch.ArgumentType.NUMBER,
+                        "defaultValue": 5
+                    }
 				}
 			},
 			{
@@ -59,13 +59,13 @@ class BetterMath {
 				"text": "[𝑥] ≤ [𝑦]",
 				"arguments": {
 					"𝑥": {
-												"type": Scratch.ArgumentType.NUMBER,
-												"defaultValue": 5
-										},
-										"𝑦": {
-												"type": Scratch.ArgumentType.NUMBER,
-												"defaultValue": 5
-										}
+                        "type": Scratch.ArgumentType.NUMBER,
+                        "defaultValue": 5
+                    },
+                    "𝑦": {
+                        "type": Scratch.ArgumentType.NUMBER,
+                        "defaultValue": 5
+                    }
 				}
 			},
 			{
@@ -74,13 +74,13 @@ class BetterMath {
 				"text": "[𝑥] ≥ [𝑦]",
 				"arguments": {
 					"𝑥": {
-												"type": Scratch.ArgumentType.NUMBER,
-												"defaultValue": 5.1
-										},
-										"𝑦": {
-												"type": Scratch.ArgumentType.NUMBER,
-												"defaultValue": 5
-										}
+                        "type": Scratch.ArgumentType.NUMBER,
+                        "defaultValue": 5.1
+                    },
+                    "𝑦": {
+                        "type": Scratch.ArgumentType.NUMBER,
+                        "defaultValue": 5
+                    }
 				}
 			},
 			{
@@ -89,13 +89,13 @@ class BetterMath {
 				"text": "[𝑥] ≰ [𝑦]",
 				"arguments": {
 					"𝑥": {
-												"type": Scratch.ArgumentType.NUMBER,
-												"defaultValue": 5
-										},
-										"𝑦": {
-												"type": Scratch.ArgumentType.NUMBER,
-												"defaultValue": 5
-										}
+                        "type": Scratch.ArgumentType.NUMBER,
+                        "defaultValue": 5
+                    },
+                    "𝑦": {
+                        "type": Scratch.ArgumentType.NUMBER,
+                        "defaultValue": 5
+                    }
 				}
 			},
 			{
@@ -104,13 +104,13 @@ class BetterMath {
 				"text": "[𝑥] ≱ [𝑦]",
 				"arguments": {
 					"𝑥": {
-												"type": Scratch.ArgumentType.NUMBER,
-												"defaultValue": 5.1
-										},
-										"𝑦": {
-												"type": Scratch.ArgumentType.NUMBER,
-												"defaultValue": 5
-										}
+                        "type": Scratch.ArgumentType.NUMBER,
+                        "defaultValue": 5.1
+                    },
+                    "𝑦": {
+                        "type": Scratch.ArgumentType.NUMBER,
+                        "defaultValue": 5
+                    }
 				}
 			},
 			{
@@ -119,13 +119,13 @@ class BetterMath {
 				"text": "[𝑥] ≮ [𝑦]",
 				"arguments": {
 					"𝑥": {
-												"type": Scratch.ArgumentType.NUMBER,
-												"defaultValue": 4
-										},
-										"𝑦": {
-												"type": Scratch.ArgumentType.NUMBER,
-												"defaultValue": 5
-										}
+                        "type": Scratch.ArgumentType.NUMBER,
+                        "defaultValue": 4
+                    },
+                    "𝑦": {
+                        "type": Scratch.ArgumentType.NUMBER,
+                        "defaultValue": 5
+                    }
 				}
 			},
 			{
@@ -134,13 +134,13 @@ class BetterMath {
 				"text": "[𝑥] ≯ [𝑦]",
 				"arguments": {
 					"𝑥": {
-												"type": Scratch.ArgumentType.NUMBER,
-												"defaultValue": 5
-										},
-										"𝑦": {
-												"type": Scratch.ArgumentType.NUMBER,
-												"defaultValue": 4
-										}
+                        "type": Scratch.ArgumentType.NUMBER,
+                        "defaultValue": 5
+                    },
+                    "𝑦": {
+                        "type": Scratch.ArgumentType.NUMBER,
+                        "defaultValue": 4
+                    }
 				}
 			},
 			{
@@ -149,13 +149,13 @@ class BetterMath {
 				"text": "[𝑥] ≲ [𝑦]",
 				"arguments": {
 					"𝑥": {
-												"type": Scratch.ArgumentType.NUMBER,
-												"defaultValue": 5.1
-										},
-										"𝑦": {
-												"type": Scratch.ArgumentType.NUMBER,
-												"defaultValue": 5
-										}
+                        "type": Scratch.ArgumentType.NUMBER,
+                        "defaultValue": 5.1
+                    },
+                    "𝑦": {
+                        "type": Scratch.ArgumentType.NUMBER,
+                        "defaultValue": 5
+                    }
 				}
 			},
 			{
@@ -164,13 +164,13 @@ class BetterMath {
 				"text": "[𝑥] ≳ [𝑦]",
 				"arguments": {
 					"𝑥": {
-												"type": Scratch.ArgumentType.NUMBER,
-												"defaultValue": 5
-										},
-										"𝑦": {
-												"type": Scratch.ArgumentType.NUMBER,
-												"defaultValue": 5.1
-										}
+                        "type": Scratch.ArgumentType.NUMBER,
+                        "defaultValue": 5
+                    },
+                    "𝑦": {
+                        "type": Scratch.ArgumentType.NUMBER,
+                        "defaultValue": 5.1
+                    }
 				}
 			},
 			{
@@ -179,13 +179,13 @@ class BetterMath {
 				"text": "[𝑥] ≺ [𝑦]",
 				"arguments": {
 					"𝑥": {
-												"type": Scratch.ArgumentType.NUMBER,
-												"defaultValue": 4
-										},
-										"𝑦": {
-												"type": Scratch.ArgumentType.NUMBER,
-												"defaultValue": 5
-										}
+                        "type": Scratch.ArgumentType.NUMBER,
+                        "defaultValue": 4
+                    },
+                    "𝑦": {
+                        "type": Scratch.ArgumentType.NUMBER,
+                        "defaultValue": 5
+                    }
 				}
 			},
 			{
@@ -194,13 +194,13 @@ class BetterMath {
 				"text": "[𝑥] ≻ [𝑦]",
 				"arguments": {
 					"𝑥": {
-												"type": Scratch.ArgumentType.NUMBER,
-												"defaultValue": 5
-										},
-										"𝑦": {
-												"type": Scratch.ArgumentType.NUMBER,
-												"defaultValue": 4
-										}
+                        "type": Scratch.ArgumentType.NUMBER,
+                        "defaultValue": 5
+                    },
+                    "𝑦": {
+                        "type": Scratch.ArgumentType.NUMBER,
+                        "defaultValue": 4
+                    }
 				}
 			},
 			{
@@ -209,13 +209,13 @@ class BetterMath {
 				"text": "[𝑥] ⪻ [𝑦]",
 				"arguments": {
 					"𝑥": {
-												"type": Scratch.ArgumentType.NUMBER,
-												"defaultValue": 3
-										},
-										"𝑦": {
-												"type": Scratch.ArgumentType.NUMBER,
-												"defaultValue": 5
-										}
+                        "type": Scratch.ArgumentType.NUMBER,
+                        "defaultValue": 3
+                    },
+                    "𝑦": {
+                        "type": Scratch.ArgumentType.NUMBER,
+                        "defaultValue": 5
+                    }
 				}
 			},
 			{
@@ -224,13 +224,13 @@ class BetterMath {
 				"text": "[𝑥] ⪼ [𝑦]",
 				"arguments": {
 					"𝑥": {
-												"type": Scratch.ArgumentType.NUMBER,
-												"defaultValue": 5
-										},
-										"𝑦": {
-												"type": Scratch.ArgumentType.NUMBER,
-												"defaultValue": 3
-										}
+                        "type": Scratch.ArgumentType.NUMBER,
+                        "defaultValue": 5
+                    },
+                    "𝑦": {
+                        "type": Scratch.ArgumentType.NUMBER,
+                        "defaultValue": 3
+                    }
 				}
 			},
 			{
@@ -239,13 +239,13 @@ class BetterMath {
 				"text": "[𝑥] ⊀ [𝑦]",
 				"arguments": {
 					"𝑥": {
-												"type": Scratch.ArgumentType.NUMBER,
-												"defaultValue": 4
-										},
-										"𝑦": {
-												"type": Scratch.ArgumentType.NUMBER,
-												"defaultValue": 5
-										}
+                        "type": Scratch.ArgumentType.NUMBER,
+                        "defaultValue": 4
+                    },
+                    "𝑦": {
+                        "type": Scratch.ArgumentType.NUMBER,
+                        "defaultValue": 5
+                    }
 				}
 			},
 			{
@@ -254,13 +254,13 @@ class BetterMath {
 				"text": "[𝑥] ⊁ [𝑦]",
 				"arguments": {
 					"𝑥": {
-												"type": Scratch.ArgumentType.NUMBER,
-												"defaultValue": 5
-										},
-										"𝑦": {
-												"type": Scratch.ArgumentType.NUMBER,
-												"defaultValue": 4
-										}
+                        "type": Scratch.ArgumentType.NUMBER,
+                        "defaultValue": 5
+                    },
+                    "𝑦": {
+                        "type": Scratch.ArgumentType.NUMBER,
+                        "defaultValue": 4
+                    }
 				}
 			},
 			{
@@ -269,13 +269,13 @@ class BetterMath {
 				"text": "[𝑥] ≼ [𝑦]",
 				"arguments": {
 					"𝑥": {
-												"type": Scratch.ArgumentType.NUMBER,
-												"defaultValue": 4
-										},
-										"𝑦": {
-												"type": Scratch.ArgumentType.NUMBER,
-												"defaultValue": 5
-										}
+                        "type": Scratch.ArgumentType.NUMBER,
+                        "defaultValue": 4
+                    },
+                    "𝑦": {
+                        "type": Scratch.ArgumentType.NUMBER,
+                        "defaultValue": 5
+                    }
 				}
 			},
 			{
@@ -284,13 +284,13 @@ class BetterMath {
 				"text": "[𝑥] ≽ [𝑦]",
 				"arguments": {
 					"𝑥": {
-												"type": Scratch.ArgumentType.NUMBER,
-												"defaultValue": 5
-										},
-										"𝑦": {
-												"type": Scratch.ArgumentType.NUMBER,
-												"defaultValue": 4
-										}
+                        "type": Scratch.ArgumentType.NUMBER,
+                        "defaultValue": 5
+                    },
+                    "𝑦": {
+                        "type": Scratch.ArgumentType.NUMBER,
+                        "defaultValue": 4
+                    }
 				}
 			},
 			{
@@ -299,13 +299,13 @@ class BetterMath {
 				"text": "[𝑥] ≾ [𝑦]",
 				"arguments": {
 					"𝑥": {
-												"type": Scratch.ArgumentType.NUMBER,
-												"defaultValue": 4
-										},
-										"𝑦": {
-												"type": Scratch.ArgumentType.NUMBER,
-												"defaultValue": 5
-										}
+                        "type": Scratch.ArgumentType.NUMBER,
+                        "defaultValue": 4
+                    },
+                    "𝑦": {
+                        "type": Scratch.ArgumentType.NUMBER,
+                        "defaultValue": 5
+                    }
 				}
 			},
 			{
@@ -314,13 +314,13 @@ class BetterMath {
 				"text": "[𝑥] ≿ [𝑦]",
 				"arguments": {
 					"𝑥": {
-												"type": Scratch.ArgumentType.NUMBER,
-												"defaultValue": 5
-										},
-										"𝑦": {
-												"type": Scratch.ArgumentType.NUMBER,
-												"defaultValue": 4
-										}
+                        "type": Scratch.ArgumentType.NUMBER,
+                        "defaultValue": 5
+                    },
+                    "𝑦": {
+                        "type": Scratch.ArgumentType.NUMBER,
+                        "defaultValue": 4
+                    }
 				}
 			},
 			"---",
@@ -329,10 +329,10 @@ class BetterMath {
 				"blockType": Scratch.BlockType.REPORTER,
 				"text": "Δ[𝑥]",
 				"arguments": {
-										"𝑥": {
-												"type": Scratch.ArgumentType.NUMBER,
-												"defaultValue": 4
-										}
+                    "𝑥": {
+                        "type": Scratch.ArgumentType.NUMBER,
+                        "defaultValue": 4
+                    }
 				}
 			},
 			{
@@ -340,18 +340,18 @@ class BetterMath {
 				"blockType": Scratch.BlockType.REPORTER,
 				"text": "Σ([up], [down], [𝑦])",
 				"arguments": {
-										"up": {
-												"type": Scratch.ArgumentType.NUMBER,
-												"defaultValue": 1
-										},
+                    "up": {
+                        "type": Scratch.ArgumentType.NUMBER,
+                        "defaultValue": 1
+                    },
 					"𝑦": {
-												"type": Scratch.ArgumentType.NUMBER,
-												"defaultValue": 2
-										},
+                        "type": Scratch.ArgumentType.NUMBER,
+                        "defaultValue": 2
+                    },
 					"down": {
-												"type": Scratch.ArgumentType.NUMBER,
-												"defaultValue": 3
-										}
+                        "type": Scratch.ArgumentType.NUMBER,
+                        "defaultValue": 3
+                    }
 				}
 			},
 			{
@@ -438,6 +438,102 @@ class BetterMath {
 			},
 			"---",
 			{
+				"opcode": "oneSeventh",
+				"blockType": Scratch.BlockType.REPORTER,
+				"text": "⅐"
+			},
+			{
+				"opcode": "oneNinth",
+				"blockType": Scratch.BlockType.REPORTER,
+				"text": "⅑"
+			},
+			{
+				"opcode": "oneTenth",
+				"blockType": Scratch.BlockType.REPORTER,
+				"text": "⅒"
+			},
+			{
+				"opcode": "oneThird",
+				"blockType": Scratch.BlockType.REPORTER,
+				"text": "⅓"
+			},
+			{
+				"opcode": "twoThird",
+				"blockType": Scratch.BlockType.REPORTER,
+				"text": "⅔"
+			},
+			{
+				"opcode": "oneFifth",
+				"blockType": Scratch.BlockType.REPORTER,
+				"text": "⅕"
+			},
+			{
+				"opcode": "twoFifth",
+				"blockType": Scratch.BlockType.REPORTER,
+				"text": "⅖"
+			},
+			{
+				"opcode": "threeFifth",
+				"blockType": Scratch.BlockType.REPORTER,
+				"text": "⅗"
+			},
+			{
+				"opcode": "fourFifth",
+				"blockType": Scratch.BlockType.REPORTER,
+				"text": "⅘"
+			},
+			{
+				"opcode": "oneSixth",
+				"blockType": Scratch.BlockType.REPORTER,
+				"text": "⅙"
+			},
+			{
+				"opcode": "fiveSixth",
+				"blockType": Scratch.BlockType.REPORTER,
+				"text": "⅚"
+			},
+			{
+				"opcode": "oneEighth",
+				"blockType": Scratch.BlockType.REPORTER,
+				"text": "⅛"
+			},
+			{
+				"opcode": "threeEighth",
+				"blockType": Scratch.BlockType.REPORTER,
+				"text": "⅜"
+			},
+			{
+				"opcode": "fiveEighth",
+				"blockType": Scratch.BlockType.REPORTER,
+				"text": "⅝"
+			},
+			{
+				"opcode": "sevenEighth",
+				"blockType": Scratch.BlockType.REPORTER,
+				"text": "⅞"
+			},
+			{
+				"opcode": "quarter",
+				"blockType": Scratch.BlockType.REPORTER,
+				"text": "¼"
+			},
+			{
+				"opcode": "threeQuarter",
+				"blockType": Scratch.BlockType.REPORTER,
+				"text": "¾"
+			},
+			{
+				"opcode": "half",
+				"blockType": Scratch.BlockType.REPORTER,
+				"text": "½"
+			},
+			{
+				"opcode": "zero",
+				"blockType": Scratch.BlockType.REPORTER,
+				"text": "↉"
+			},
+			"---",
+			{
 				"opcode": "sqrt",
 				"blockType": Scratch.BlockType.REPORTER,
 				"text": "√[𝑥]",
@@ -517,16 +613,16 @@ class BetterMath {
 				}
 			}
 			],
-						"menus": {
-								"roundingMethods": {
-										"acceptReporters": true,
-										"items": ["floor", "round", "ceil"]
-								}
-						}
-				}
-		}
+            "menus": {
+                "roundingMethods": {
+                    "acceptReporters": true,
+                    "items": ["floor", "round", "ceil"]
+                }
+            }
+        }
+    }
 
-		approxEqual({ 𝑥, 𝑦 }) {
+    approxEqual({ 𝑥, 𝑦 }) {
 		return Math.round(𝑥) === Math.round(𝑦)
 	}
 
@@ -541,7 +637,6 @@ class BetterMath {
 	lessOrApproxEqual({ 𝑥, 𝑦 }) {
 		return (𝑥 < 𝑦) || this.approxEqual({ 𝑥: 𝑥, 𝑦: 𝑦 })
 	}
-
 	moreOrApproxEqual({ 𝑥, 𝑦 }) {
 		return (𝑥 > 𝑦) || this.approxEqual({ 𝑥: 𝑥, 𝑦: 𝑦 })
 	}
@@ -549,7 +644,6 @@ class BetterMath {
 	precedes({ 𝑥, 𝑦 }) {
 		return 𝑥 + 1 === 𝑦
 	}
-
 	succeeds({ 𝑥, 𝑦 }) {
 		return 𝑥 === 𝑦 + 1
 	}
@@ -557,7 +651,6 @@ class BetterMath {
 	doublePrecedes({ 𝑥, 𝑦 }) {
 		return 𝑥 + 2 === 𝑦
 	}
-
 	doubleSucceeds({ 𝑥, 𝑦 }) {
 		return 𝑥 === 𝑦 + 2
 	}
@@ -565,7 +658,6 @@ class BetterMath {
 	precedesOrEqual({ 𝑥, 𝑦 }) {
 		return (𝑥 + 1 === 𝑦) || 𝑥 === 𝑦
 	}
-
 	succeedsOrEqual({ 𝑥, 𝑦 }) {
 		return (𝑥 === 𝑦 + 1) || 𝑥 === 𝑦
 	}
@@ -573,7 +665,6 @@ class BetterMath {
 	precedesOrApproxEqual({ 𝑥, 𝑦 }) {
 		return (𝑥 + 1 === 𝑦) || this.approxEqual({ 𝑥: 𝑥, 𝑦: 𝑦 })
 	}
-
 	succeedsOrApproxEqual({ 𝑥, 𝑦 }) {
 		return (𝑥 === 𝑦 + 1) || this.approxEqual({ 𝑥: 𝑥, 𝑦: 𝑦 })
 	}
@@ -581,7 +672,6 @@ class BetterMath {
 	notPrecedes({ 𝑥, 𝑦 }) {
 		return !this.precedes({ 𝑥: 𝑥, 𝑦: 𝑦 })
 	}
-
 	notSucceeds({ 𝑥, 𝑦 }) {
 		return !this.succeeds({ 𝑥: 𝑥, 𝑦: 𝑦 })
 	}
@@ -589,7 +679,6 @@ class BetterMath {
 	lessThanOrEqual({ 𝑥, 𝑦 }) {
 		return 𝑥 <= 𝑦
 	}
-
 	moreThanOrEqual({ 𝑥, 𝑦 }) {
 		return 𝑥 >= 𝑦
 	}
@@ -597,7 +686,6 @@ class BetterMath {
 	notLessThanOrEqual({ 𝑥, 𝑦 }) {
 		return !(𝑥 <= 𝑦)
 	}
-
 	notMoreThanOrEqual({ 𝑥, 𝑦 }) {
 		return !(𝑥 >= 𝑦)
 	}
@@ -605,7 +693,6 @@ class BetterMath {
 	notLessThan({ 𝑥, 𝑦 }) {
 		return !(𝑥 < 𝑦)
 	}
-
 	notMoreThan({ 𝑥, 𝑦 }) {
 		return !(𝑥 > 𝑦)
 	}
@@ -634,21 +721,21 @@ class BetterMath {
 	Γ({ 𝑥 }) {
 		const g = 7
 		const p = [
-			0.99999999999980993, 676.5203681218851, -1259.1392167224028,
-			771.32342877765313, -176.6150291498386, 12.507343278686905,
-			-0.13857109526572012, 9.9843695780195716e-6, 1.5056327351493116e-7
+		  0.99999999999980993, 676.5203681218851, -1259.1392167224028,
+		  771.32342877765313, -176.6150291498386, 12.507343278686905,
+		  -0.13857109526572012, 9.9843695780195716e-6, 1.5056327351493116e-7
 		]
-		
+	  
 		if (𝑥 < 0.5) {
-			return Math.PI / (Math.sin(Math.PI * 𝑥) * gamma(1 - 𝑥))
+		  return Math.PI / (Math.sin(Math.PI * 𝑥) * gamma(1 - 𝑥))
 		}
-		
+	  
 		𝑥 --
 		let x = p[0]
 		for (let i = 1; i < g + 2; i ++) {
-			x += p[i] / (𝑥 + i)
+		  x += p[i] / (𝑥 + i)
 		}
-		
+	  
 		let t = 𝑥 + g + 0.5;
 		return Math.sqrt(2 * Math.PI) * t ** (𝑥 + 0.5) * Math.exp(-t) * x;
 	}
@@ -732,6 +819,73 @@ class BetterMath {
 
 	α({}) {
 		return 2.502907875 // Again Again, I couldn't get an algorithm to work, I'm so sorry :(
+	}
+
+	oneSeventh({}) {
+		return 1 / 7
+	}
+
+	oneNinth({}) {
+		return 1 / 9
+	}
+
+	oneTenth({}) {
+		return 0.1
+	}
+
+	oneThird({}) {
+		return 1 / 3
+	}
+	twoThird({}) {
+		return 2 / 3
+	}
+
+	oneFifth({}) {
+		return 0.2
+	}
+	twoFifth({}) {
+		return 0.4
+	}
+	threeFifth({}) {
+		return 0.6
+	}
+	fourFifth({}) {
+		return 0.8
+	}
+
+	oneSixth({}) {
+		return 1 / 6
+	}
+	fiveSixth({}) {
+		return 5 / 6
+	}
+
+	oneEighth({}) {
+		return 0.125
+	}
+	threeEighth({}) {
+		return 0.375
+	}
+	fiveEighth({}) {
+		return 0.625
+	}
+	sevenEighth({}) {
+		return 0.875
+	}
+
+	quarter({}) {
+		return 0.25
+	}
+	threeQuarter({}) {
+		return 0.75
+	}
+
+	half({}) {
+		return 0.5
+	}
+
+	zero({}) {
+		return 0
 	}
 
 	sqrt({ 𝑥 }) {
