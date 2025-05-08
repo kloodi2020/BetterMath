@@ -1,3 +1,3 @@
 # BetterMath
-An extension meant to confuse you.
+A scratch extension meant to confuse you.
 If successful, then yay! :D
